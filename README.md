@@ -1,6 +1,8 @@
 # Elevy — primeira versão
 
-Site institucional responsivo e estático para a Elevy, com duas jornadas principais: comprar suplementações e solicitar um agendamento. Todo pedido é preparado no navegador e encaminhado ao WhatsApp **(61) 99141-6144**; o site não armazena dados nem confirma compra ou horário.
+Site institucional responsivo e estático para a Elevy, com visual claro e acolhedor. A página apresenta Priscila, enfermeira especialista em estética avançada e gestão clínica, explica as categorias de suplementação e oferece duas jornadas: comprar suplementações ou solicitar um agendamento. Todo pedido é preparado no navegador e encaminhado ao WhatsApp **(61) 99141-6144**; o site não armazena dados nem confirma compra ou horário.
+
+O perfil público `@suplementacao_injetavel` confirmou atendimento no Gama–DF e em Luziânia–GO, além dos temas energia, cabelos e unhas, imunidade e bem-estar. Os posts e conteúdos internos dos destaques exigem login; nomes de produtos, preços, composições e depoimentos não foram inferidos.
 
 ## Visualizar e testar
 
@@ -26,4 +28,4 @@ npm test
 - `site/assets/`: versões publicáveis das mídias.
 - `PUBLICACAO.md`: configuração do GitHub e Cloudflare Pages.
 
-Antes de publicar, confirmar responsável técnico/registro, lista real de produtos ou protocolos, endereço e domínio. Não foram incluídos preços, benefícios clínicos, depoimentos ou credenciais não confirmados.
+Antes de publicar, confirmar o registro profissional, a lista real de produtos/protocolos, o endereço de Luziânia e o domínio. Não foram incluídos preços, nomes de ativos, depoimentos ou promessas clínicas não confirmadas.
