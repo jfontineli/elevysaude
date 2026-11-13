@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db
+
+# Originais ficam fora da pasta publicada.
+/logo.jpeg
+/logo1.jpeg

@@ -1,0 +1,13 @@
+{
+  "name": "elevy-suplementacao-injetavel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tools/check.mjs && node tools/browser-check.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
