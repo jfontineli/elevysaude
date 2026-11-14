@@ -16,7 +16,8 @@ Cada push na `main` publica uma nova versão em **https://elevysaude.pages.dev/*
 - Projeto `elevysaude` criado no Cloudflare Pages com origem GitHub configurada.
 - Primeira versão publicada e validada em `https://elevysaude.pages.dev/`.
 - Publicação inicial realizada manualmente no projeto já conectado ao GitHub.
-- Pendente: liberar o repositório `jfontineli/elevysaude` na instalação **Cloudflare Workers and Pages** em `https://github.com/settings/installations`. Depois dessa autorização, confirmar o deploy automático com um novo push na `main`.
+- Integração **Cloudflare Workers and Pages** autorizada para `jfontineli/elevysaude`.
+- Deploy automático pela branch `main` confirmado com sucesso em 14/11/2026.
 
 ## Domínio próprio
 
