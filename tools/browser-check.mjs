@@ -17,6 +17,15 @@ try {
   await page.evaluate(async () => { for (const image of document.images) image.loading = 'eager'; await Promise.all([...document.images].map(image => image.decode().catch(() => {}))); });
   const imageState = await page.locator('.about-picture img').evaluate(image => ({complete:image.complete,naturalWidth:image.naturalWidth,currentSrc:image.currentSrc}));
   assert(imageState.complete && imageState.naturalWidth > 0, JSON.stringify(imageState));
+  const logoAlpha = await page.locator('.brand img').evaluate(image => {
+    const canvas = document.createElement('canvas');
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, 1, 1).data[3];
+  });
+  assert(logoAlpha < 10, `Logo sem transparência real: alpha ${logoAlpha}`);
   assert.equal(await page.locator('.product-card').count(), 24);
   const whatsappLinks = await page.locator('[data-whatsapp]').evaluateAll(links => links.map(link => link.href));
   assert(whatsappLinks.length >= 5);
@@ -63,7 +72,7 @@ try {
     assert.equal(await page.locator('.menu-button').getAttribute('aria-expanded'), 'false');
     if (width === 390) await page.screenshot({path:'test-results/mobile.png', fullPage:true});
   }
-  for (const href of ['styles.css','app.js','config.js','products.js','favicon.svg','robots.txt','sitemap.xml','assets/elevy-logo-oficial.png','assets/medgarden.webp','assets/priscila.png']) {
+  for (const href of ['styles.css','app.js','config.js','products.js','favicon.svg','robots.txt','sitemap.xml','assets/elevy-logo-oficial.png','assets/priscila.png']) {
     const asset = await page.request.get(`http://127.0.0.1:4175/${href}`);
     assert.equal(asset.status(), 200, href);
   }

@@ -25,5 +25,7 @@ assert(context.window.ELEVY_PRODUCTS.every(product => product.name && product.ca
 for (const forbidden of [/R\$/i, /depoimento/i, /\bcura\b/i, /\bgarantid[oa]s?\b/i]) assert(!forbidden.test(html), `Conteúdo não confirmado: ${forbidden}`);
 assert(html.includes('Comprar suplementações') && html.includes('Solicitar agendamento') && html.includes('Tirar uma dúvida'));
 assert(!html.includes('O que você quer conversar sobre?'));
-assert(html.includes('Elevy dentro da MedGarden'));
+assert(html.includes('Atendimento na MedGarden'));
+assert(html.includes('href="#localizacao"'));
+assert(!html.includes('assets/medgarden.webp'));
 console.log('OK: arquivos, âncoras, contatos, jornadas e catálogo com 24 produtos confirmados.');
