@@ -116,16 +116,19 @@
     event.preventDefault();
     const data = new FormData(form);
     const intent = data.get('intent');
-    const objective = data.get('objective');
     const name = String(data.get('name') || '').trim();
     const notes = String(data.get('notes') || '').trim();
     const chosen = products.filter(product => selected.has(product.id));
-    const action = intent === 'agendar' ? 'solicitar um agendamento' : 'consultar opções para compra';
+    const actions = {
+      comprar: 'consultar opções para compra',
+      agendar: 'solicitar um agendamento',
+      duvida: 'tirar uma dúvida'
+    };
+    const action = actions[intent] || actions.comprar;
     const lines = [
       `Olá, Priscila!${name ? ` Meu nome é ${name}.` : ''} Conheci a Elevy pelo site.`,
       `Gostaria de ${action}.`,
       chosen.length ? `Produtos selecionados:\n${chosen.map(product => `• ${product.name}`).join('\n')}` : 'Ainda não selecionei um produto específico.',
-      `Meu interesse: ${objective}.`,
       notes ? `Dúvida/observação: ${notes}` : '',
       'Pode me informar a disponibilidade, os valores e como funciona?'
     ].filter(Boolean);

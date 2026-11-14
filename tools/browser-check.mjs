@@ -37,6 +37,8 @@ try {
   await page.locator('[data-select-product="magnesio"]').click();
   assert(await page.locator('#selection-dock').isVisible());
   assert.equal(await page.locator('#selection-count').textContent(), '2');
+  assert((await page.locator('#selection-dock').boundingBox()).width <= 380);
+  assert.equal(await page.locator('[name="intent"]').count(), 3);
   await page.locator('[name="intent"][value="agendar"]').check();
   await page.locator('[name="name"]').fill('Teste de navegação');
   await page.evaluate(() => { window.open = url => { window.__opened = url; return null; }; });
@@ -46,6 +48,8 @@ try {
   assert(decodeURIComponent(target).includes('agendamento'));
   assert(decodeURIComponent(target).includes('Vitamina B12'));
   assert(decodeURIComponent(target).includes('Magnésio'));
+  const footerLogo = await page.locator('.footer-main > img').evaluate(image => ({rendered:image.getBoundingClientRect().width / image.getBoundingClientRect().height,natural:image.naturalWidth / image.naturalHeight}));
+  assert(Math.abs(footerLogo.rendered - footerLogo.natural) < 0.05, `Logo distorcida: ${JSON.stringify(footerLogo)}`);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({path:'test-results/desktop.png', fullPage:true});
   for (const width of [320,390,768]) {

@@ -22,5 +22,6 @@ assert.equal(context.window.ELEVY_PRODUCTS.length, 24);
 assert.equal(new Set(context.window.ELEVY_PRODUCTS.map(product => product.id)).size, 24, 'IDs de produtos duplicados');
 assert(context.window.ELEVY_PRODUCTS.every(product => product.name && product.category && product.description), 'Produto incompleto');
 for (const forbidden of [/R\$/i, /depoimento/i, /\bcura\b/i, /\bgarantid[oa]s?\b/i]) assert(!forbidden.test(html), `Conteúdo não confirmado: ${forbidden}`);
-assert(html.includes('Comprar suplementações') && html.includes('Solicitar agendamento'));
+assert(html.includes('Comprar suplementações') && html.includes('Solicitar agendamento') && html.includes('Tirar uma dúvida'));
+assert(!html.includes('O que você quer conversar sobre?'));
 console.log('OK: arquivos, âncoras, contatos, jornadas e catálogo com 24 produtos confirmados.');

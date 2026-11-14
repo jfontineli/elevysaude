@@ -31,7 +31,7 @@
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
       <a href="#catalogo">Catálogo</a>
-      <a href="#priscila">Priscila</a>
+      <a href="#priscila">Quem sou</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
       <a class="nav-cta" data-whatsapp data-intent="atendimento" href="https://wa.me/5561991416144" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
@@ -56,10 +56,6 @@
           <a class="button button-primary" href="#catalogo">Conhecer as opções <span aria-hidden="true">↓</span></a>
           <a class="button button-quiet" data-whatsapp data-intent="atendimento" href="https://wa.me/5561991416144" target="_blank" rel="noopener noreferrer">Falar com a Priscila <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-trust" aria-label="Informações principais">
-          <span><b>Enfermeira</b> especialista em estética avançada</span>
-          <span><b>Atendimento</b> Gama–DF e Luziânia–GO</span>
-        </div>
       </div>
       <div class="hero-visual">
         <span class="soft-shape shape-one" aria-hidden="true"></span>
@@ -67,13 +63,6 @@
         <img src="assets/elevy-logo-claro.png" alt="Elevy — saúde e bem-estar, suplementação injetável" width="822" height="475" fetchpriority="high">
         <p>Saúde não é vaidade.<br><strong>É confiança e identidade.</strong></p>
       </div>
-    </section>
-
-    <section class="interest-strip" aria-label="Temas apresentados pela Elevy">
-      <div><span>01</span><p>Energia e disposição</p></div>
-      <div><span>02</span><p>Cuidado com cabelos e unhas</p></div>
-      <div><span>03</span><p>Imunidade e bem-estar</p></div>
-      <div><span>04</span><p>Orientação individual</p></div>
     </section>
 
     <section class="catalog-section section" id="catalogo" aria-labelledby="catalog-title">
@@ -120,7 +109,7 @@
         <p>Você escolhe o caminho e revisa a mensagem antes de enviá-la. O contato não confirma automaticamente compra ou horário.</p>
       </div>
       <ol>
-        <li><span>1</span><div><h3>Conte o que procura</h3><p>Escolha uma categoria e diga se deseja comprar ou solicitar um agendamento.</p></div></li>
+        <li><span>1</span><div><h3>Conte o que procura</h3><p>Selecione os produtos e diga se deseja comprar, agendar ou tirar uma dúvida.</p></div></li>
         <li><span>2</span><div><h3>Receba as informações</h3><p>A Elevy confirma opções disponíveis, valores, condições e orientações relacionadas ao atendimento.</p></div></li>
         <li><span>3</span><div><h3>Combine o próximo passo</h3><p>Após esclarecer suas dúvidas, confirme a compra ou combine o atendimento diretamente com a Priscila.</p></div></li>
       </ol>
@@ -143,13 +132,9 @@
           <legend>O que você deseja?</legend>
           <label><input type="radio" name="intent" value="comprar" checked><span>Comprar suplementações</span></label>
           <label><input type="radio" name="intent" value="agendar"><span>Solicitar agendamento</span></label>
+          <label><input type="radio" name="intent" value="duvida"><span>Tirar uma dúvida</span></label>
         </fieldset>
-        <label class="field">O que você quer conversar sobre?
-          <select name="objective">
-            <option>Quero conhecer as opções</option><option>Energia e disposição</option><option>Cabelos e unhas</option><option>Imunidade e bem-estar</option><option>Outro objetivo</option>
-          </select>
-        </label>
-        <label class="field">Seu nome <span>(opcional)</span><input name="name" autocomplete="given-name" maxlength="80" placeholder="Como podemos te chamar?"></label>
+        <label class="field full">Seu nome <span>(opcional)</span><input name="name" autocomplete="given-name" maxlength="80" placeholder="Como podemos te chamar?"></label>
         <label class="field full">Dúvida ou observação <span>(opcional)</span><textarea name="notes" rows="3" maxlength="500" placeholder="Conte um pouco do que você procura"></textarea></label>
         <button class="button button-primary full" type="submit">Continuar no WhatsApp <span aria-hidden="true">↗</span></button>
         <p class="form-note full">Nenhum dado é armazenado neste site. Disponibilidade, indicação, valores e condições são confirmados no atendimento.</p>
