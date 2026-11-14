@@ -1,8 +1,8 @@
 # Elevy — primeira versão
 
-Site institucional responsivo e estático para a Elevy, com visual claro e acolhedor. A página apresenta Priscila, enfermeira especialista em estética avançada e gestão clínica, e oferece um catálogo pesquisável com 24 produtos em quatro categorias. O visitante pode selecionar vários itens e encaminhar uma única lista pelo WhatsApp **(61) 99141-6144**, escolhendo entre comprar suplementações ou solicitar um agendamento. O site não armazena dados nem confirma compra ou horário.
+Site institucional responsivo e estático para a Elevy, com visual claro e acolhedor. A página apresenta Priscila, enfermeira especialista em estética avançada e gestão clínica, e oferece um catálogo pesquisável com 24 produtos em quatro categorias. O visitante pode selecionar vários itens e encaminhar uma única lista pelo WhatsApp **(61) 99141-6144**, escolhendo entre comprar suplementações, solicitar um agendamento ou tirar uma dúvida. O site não armazena dados nem confirma compra ou horário.
 
-O perfil público `@suplementacao_injetavel` confirmou atendimento no Gama–DF e em Luziânia–GO, além dos temas energia, cabelos e unhas, imunidade e bem-estar. Os posts e conteúdos internos dos destaques exigem login; nomes de produtos, preços, composições e depoimentos não foram inferidos.
+No Gama–DF, o atendimento ocorre em uma sala dentro da **MedGarden — Clínica Médica e Odontológica**, na Quadra 02, Conjunto I, Lote 405. O site também informa atendimento em Luziânia–GO. Nomes de produtos, preços, composições e depoimentos não foram inferidos.
 
 ## Visualizar e testar
 

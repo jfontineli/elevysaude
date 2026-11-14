@@ -45,12 +45,22 @@ footer{padding-top:38px}
 .selection-dock{left:auto;right:18px;transform:none;width:auto;max-width:360px;grid-template-columns:auto auto auto;border-radius:12px;padding:8px 10px;box-shadow:0 10px 34px rgba(60,51,45,.14)}
 .selection-dock>div>span{display:none}
 .has-selection{padding-bottom:0}
+.brand img{height:auto;max-height:60px;object-fit:contain}
+.hero-visual>img{height:auto}
+.location{grid-template-columns:minmax(0,1.5fr) auto;align-items:center}
+.location-place{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;align-items:center}
+.location-place>img{width:170px;height:auto;background:#fff;border:1px solid rgba(60,51,45,.1);border-radius:10px;padding:9px}
+.location-place .eyebrow{margin-bottom:10px}
+.location-place h2{margin-bottom:8px}
+.location-actions{min-width:max-content}
 
 @media (max-width:920px){
   .hero{min-height:auto}
   .contact-section{grid-template-columns:1fr}
   .contact-builder fieldset{grid-template-columns:repeat(3,1fr)}
   .footer-main{grid-template-columns:150px 1fr}
+  .location{grid-template-columns:1fr}
+  .location-actions{min-width:0}
 }
 @media (max-width:700px){
   .hero{padding-top:36px;padding-bottom:44px;gap:32px}
@@ -65,6 +75,8 @@ footer{padding-top:38px}
   .contact-builder fieldset{grid-template-columns:1fr}
   .location{margin-bottom:42px;padding:26px 22px}
   .location h2{font-size:29px}
+  .location-place{grid-template-columns:1fr;gap:20px}
+  .location-place>img{width:150px}
   .selection-dock{right:8px;width:calc(100vw - 16px)}
   body.has-selection{padding-bottom:72px}
 }

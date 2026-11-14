@@ -20,7 +20,7 @@
   const categoryNames = {vitaminas:'Vitaminas',minerais:'Minerais',aminoacidos:'Aminoácidos',bioativos:'Bioativos e antioxidantes'};
   const messages = {
     atendimento: 'Olá, Priscila! Conheci a Elevy pelo site e gostaria de receber mais informações sobre suplementação injetável.',
-    localizacao: 'Olá, Priscila! Conheci a Elevy pelo site e gostaria de confirmar o local do atendimento.'
+    localizacao: 'Olá, Priscila! Conheci a Elevy pelo site e gostaria de confirmar o atendimento na MedGarden.'
   };
   const whatsappUrl = message => `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`;
   const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();

@@ -24,7 +24,7 @@ try {
   const instagramLinks = await page.locator('[data-instagram]').evaluateAll(links => links.map(link => link.href));
   assert(instagramLinks.length >= 2);
   assert(instagramLinks.every(href => href === 'https://www.instagram.com/suplementacao_injetavel/'));
-  assert((await page.locator('[data-map]').getAttribute('href')).startsWith('https://www.google.com/maps/search/'));
+  assert.equal(await page.locator('[data-map]').getAttribute('href'), 'https://maps.app.goo.gl/CiePNUp7ugi96bZj9');
   const unsafeBlank = await page.locator('a[target="_blank"]').evaluateAll(links => links.filter(link => !link.rel.includes('noopener')).length);
   assert.equal(unsafeBlank, 0);
   await page.locator('#product-search').fill('B12');
@@ -63,7 +63,7 @@ try {
     assert.equal(await page.locator('.menu-button').getAttribute('aria-expanded'), 'false');
     if (width === 390) await page.screenshot({path:'test-results/mobile.png', fullPage:true});
   }
-  for (const href of ['styles.css','app.js','config.js','products.js','favicon.svg','robots.txt','sitemap.xml','assets/elevy-logo-claro.png','assets/priscila.png']) {
+  for (const href of ['styles.css','app.js','config.js','products.js','favicon.svg','robots.txt','sitemap.xml','assets/elevy-logo-oficial.png','assets/medgarden.webp','assets/priscila.png']) {
     const asset = await page.request.get(`http://127.0.0.1:4175/${href}`);
     assert.equal(asset.status(), 200, href);
   }

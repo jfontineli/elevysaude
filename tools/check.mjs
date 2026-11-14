@@ -18,10 +18,12 @@ vm.runInNewContext(fs.readFileSync(path.join(root, 'config.js'), 'utf8'), contex
 vm.runInNewContext(fs.readFileSync(path.join(root, 'products.js'), 'utf8'), context);
 assert.equal(context.window.ELEVY.whatsapp, '5561991416144');
 assert.equal(context.window.ELEVY.instagramLabel, '@suplementacao_injetavel');
+assert.equal(context.window.ELEVY.maps, 'https://maps.app.goo.gl/CiePNUp7ugi96bZj9');
 assert.equal(context.window.ELEVY_PRODUCTS.length, 24);
 assert.equal(new Set(context.window.ELEVY_PRODUCTS.map(product => product.id)).size, 24, 'IDs de produtos duplicados');
 assert(context.window.ELEVY_PRODUCTS.every(product => product.name && product.category && product.description), 'Produto incompleto');
 for (const forbidden of [/R\$/i, /depoimento/i, /\bcura\b/i, /\bgarantid[oa]s?\b/i]) assert(!forbidden.test(html), `Conteúdo não confirmado: ${forbidden}`);
 assert(html.includes('Comprar suplementações') && html.includes('Solicitar agendamento') && html.includes('Tirar uma dúvida'));
 assert(!html.includes('O que você quer conversar sobre?'));
+assert(html.includes('Elevy dentro da MedGarden'));
 console.log('OK: arquivos, âncoras, contatos, jornadas e catálogo com 24 produtos confirmados.');
