@@ -72,7 +72,7 @@ try {
     assert.equal(await page.locator('.menu-button').getAttribute('aria-expanded'), 'false');
     if (width === 390) await page.screenshot({path:'test-results/mobile.png', fullPage:true});
   }
-  for (const href of ['styles.css','app.js','config.js','products.js','favicon.svg','robots.txt','sitemap.xml','assets/elevy-logo-oficial.png','assets/priscila.png']) {
+  for (const href of ['styles.css','app.js','config.js','products.js','favicon.png','robots.txt','sitemap.xml','assets/elevy-logo-oficial.png','assets/priscila.png']) {
     const asset = await page.request.get(`http://127.0.0.1:4175/${href}`);
     assert.equal(asset.status(), 200, href);
   }
