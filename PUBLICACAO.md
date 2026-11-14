@@ -2,7 +2,7 @@
 
 ## Configuração prevista
 
-- Repositório GitHub próprio, branch de produção `main`.
+- Repositório GitHub: `https://github.com/jfontineli/elevysaude`, branch de produção `main`.
 - Cloudflare Pages conectado ao GitHub.
 - Framework: `None`.
 - Comando de build: `exit 0`.
