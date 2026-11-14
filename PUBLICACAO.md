@@ -9,7 +9,7 @@
 - Diretório de saída: `site`.
 - Diretório raiz: padrão (raiz do repositório).
 
-Cada push na `main` publicará uma nova versão. Primeiro valide a URL `pages.dev` efetivamente fornecida pela Cloudflare; depois substitua a URL provisória `https://elevy.pages.dev/` em `site/index.html`, `site/config.js`, `site/robots.txt` e `site/sitemap.xml` pela URL canônica real.
+Cada push na `main` publica uma nova versão em **https://elevysaude.pages.dev/**. Projeto Cloudflare Pages: `elevysaude`, conectado ao repositório GitHub acima.
 
 ## Domínio próprio
 
@@ -20,7 +20,7 @@ O domínio ainda não foi informado. Quando estiver definido:
 3. No Registro.br, só altere os registros indicados pela configuração real do Cloudflare. Exporte e preserve antes todos os registros existentes, especialmente MX, SPF, DKIM e demais TXT de e-mail.
 4. Aguarde a emissão do certificado e valide HTTPS nos dois endereços, a tag canônica, `robots.txt` e `sitemap.xml`.
 
-Não presuma valores de CNAME, A/AAAA ou nameservers: eles dependem do projeto e da zona criada no login do cliente. A URL `pages.dev`, o repositório e qualquer instrução exata de DNS devem ser preenchidos aqui depois da criação real.
+Não presuma valores de CNAME, A/AAAA ou nameservers: eles dependem do domínio que será registrado e da zona criada no login do cliente. Preencha aqui as instruções exatas somente depois da configuração real do domínio.
 
 ## Checklist de lançamento
 
