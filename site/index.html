@@ -18,6 +18,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script defer src="config.js"></script>
+  <script defer src="products.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
@@ -29,13 +30,21 @@
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
-      <a href="#opcoes">Opções</a>
+      <a href="#catalogo">Catálogo</a>
       <a href="#priscila">Priscila</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
       <a class="nav-cta" data-whatsapp data-intent="atendimento" href="https://wa.me/5561991416144" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
     </nav>
   </header>
+
+  <nav class="catalog-menu" aria-label="Categorias do catálogo">
+    <a href="#catalogo" data-filter-link="todos">Todos os produtos</a>
+    <a href="#catalogo" data-filter-link="vitaminas">Vitaminas</a>
+    <a href="#catalogo" data-filter-link="minerais">Minerais</a>
+    <a href="#catalogo" data-filter-link="aminoacidos">Aminoácidos</a>
+    <a href="#catalogo" data-filter-link="bioativos">Bioativos e antioxidantes</a>
+  </nav>
 
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
@@ -44,7 +53,7 @@
         <h1 id="hero-title">Vitaminas e minerais injetáveis, com cuidado que começa na <em>escuta.</em></h1>
         <p class="hero-lead">Conheça as opções da Elevy, entenda como funciona e converse diretamente com a Priscila para comprar as suplementações ou solicitar um agendamento.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#opcoes">Conhecer as opções <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#catalogo">Conhecer as opções <span aria-hidden="true">↓</span></a>
           <a class="button button-quiet" data-whatsapp data-intent="atendimento" href="https://wa.me/5561991416144" target="_blank" rel="noopener noreferrer">Falar com a Priscila <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-trust" aria-label="Informações principais">
@@ -67,47 +76,27 @@
       <div><span>04</span><p>Orientação individual</p></div>
     </section>
 
-    <section class="options section" id="opcoes" aria-labelledby="options-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">Conheça as categorias</p><h2 id="options-title">Informação para você escolher com mais <em>segurança.</em></h2></div>
-        <p>A disponibilidade, a composição, a via de administração e os valores são confirmados no atendimento. Cada opção deve considerar a necessidade individual e as orientações aplicáveis.</p>
+    <section class="catalog-section section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading catalog-heading">
+        <div><p class="eyebrow">Catálogo Elevy</p><h2 id="catalog-title">Escolha o que deseja conhecer.</h2></div>
+        <p>Pesquise, filtre e selecione quantos itens quiser. A lista será organizada em uma única mensagem para a Priscila, sem compromisso de compra ou agendamento.</p>
       </div>
 
-      <div class="category-grid" role="list">
-        <button class="category-card active" type="button" data-category="Vitaminas injetáveis" aria-pressed="true">
-          <span class="category-number">01</span><span class="category-symbol" aria-hidden="true">V</span>
-          <strong>Vitaminas<br>injetáveis</strong>
-          <p>Vitaminas isoladas ou em combinações, conforme disponibilidade e orientação individual.</p>
-          <span class="category-action">Consultar opções <b aria-hidden="true">↗</b></span>
-        </button>
-        <button class="category-card" type="button" data-category="Minerais" aria-pressed="false">
-          <span class="category-number">02</span><span class="category-symbol" aria-hidden="true">M</span>
-          <strong>Minerais</strong>
-          <p>Opções de suplementação mineral cuja escolha depende do objetivo e da avaliação necessária.</p>
-          <span class="category-action">Consultar opções <b aria-hidden="true">↗</b></span>
-        </button>
-        <button class="category-card" type="button" data-category="Aminoácidos" aria-pressed="false">
-          <span class="category-number">03</span><span class="category-symbol" aria-hidden="true">A</span>
-          <strong>Aminoácidos</strong>
-          <p>Consulte quais apresentações estão disponíveis e quais orientações se aplicam a cada caso.</p>
-          <span class="category-action">Consultar opções <b aria-hidden="true">↗</b></span>
-        </button>
-        <button class="category-card" type="button" data-category="Antioxidantes" aria-pressed="false">
-          <span class="category-number">04</span><span class="category-symbol" aria-hidden="true">O</span>
-          <strong>Antioxidantes</strong>
-          <p>Categoria apresentada com informações de composição e uso durante o atendimento.</p>
-          <span class="category-action">Consultar opções <b aria-hidden="true">↗</b></span>
-        </button>
+      <div class="catalog-toolbar">
+        <label class="catalog-search" for="product-search"><span class="sr-only">Buscar produto</span><input type="search" id="product-search" placeholder="Digite o que você procura" autocomplete="off"><span aria-hidden="true">⌕</span></label>
+        <div class="catalog-filters" role="group" aria-label="Filtrar produtos por categoria">
+          <button class="active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
+          <button type="button" data-filter="minerais" aria-pressed="false">Minerais</button>
+          <button type="button" data-filter="aminoacidos" aria-pressed="false">Aminoácidos</button>
+          <button type="button" data-filter="bioativos" aria-pressed="false">Bioativos e antioxidantes</button>
+        </div>
       </div>
 
-      <div class="info-panel">
-        <div><p class="eyebrow">Antes de escolher</p><h3>O que você pode confirmar com a Elevy</h3></div>
-        <ul>
-          <li><span>✓</span><p><strong>Disponibilidade e composição</strong>Nomes, apresentações e combinações disponíveis no momento.</p></li>
-          <li><span>✓</span><p><strong>Compra ou aplicação</strong>Se a opção pode ser adquirida ou se requer atendimento e agendamento.</p></li>
-          <li><span>✓</span><p><strong>Valores e condições</strong>Preço individual, possibilidade de combinação e condições informadas no WhatsApp.</p></li>
-        </ul>
-      </div>
+      <div class="catalog-meta"><p id="catalog-status" role="status">24 opções disponíveis</p><button id="clear-selection-top" type="button" hidden>Limpar seleção</button></div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="catalog-empty" id="catalog-empty" hidden>Nenhum item encontrado. Tente outro nome ou categoria.</p>
+      <aside class="catalog-disclaimer"><span aria-hidden="true">i</span><p><strong>Informação educativa</strong> As descrições resumem funções gerais dos nutrientes no organismo. Não representam indicação de uso, promessa de resultado ou prescrição. A composição, a concentração, a via e a necessidade devem ser confirmadas no atendimento.</p></aside>
     </section>
 
     <section class="about section" id="priscila" aria-labelledby="about-title">
@@ -145,16 +134,16 @@
         <div class="contact-locations"><span>Gama · Distrito Federal</span><span>Luziânia · Goiás</span></div>
       </div>
       <form class="contact-builder" id="contact-form">
+        <div class="selected-products full" id="selected-products-panel">
+          <div><span>Produtos selecionados</span><button type="button" id="edit-selection">Editar no catálogo</button></div>
+          <p id="selected-products-empty">Nenhum item selecionado. Você ainda pode enviar uma dúvida geral.</p>
+          <ul id="selected-products-list"></ul>
+        </div>
         <fieldset>
           <legend>O que você deseja?</legend>
           <label><input type="radio" name="intent" value="comprar" checked><span>Comprar suplementações</span></label>
           <label><input type="radio" name="intent" value="agendar"><span>Solicitar agendamento</span></label>
         </fieldset>
-        <label class="field">Categoria
-          <select name="category" id="category-select">
-            <option>Vitaminas injetáveis</option><option>Minerais</option><option>Aminoácidos</option><option>Antioxidantes</option>
-          </select>
-        </label>
         <label class="field">O que você quer conversar sobre?
           <select name="objective">
             <option>Quero conhecer as opções</option><option>Energia e disposição</option><option>Cabelos e unhas</option><option>Imunidade e bem-estar</option><option>Outro objetivo</option>
@@ -199,6 +188,12 @@
     </div>
     <div class="footer-bottom"><span>© <span id="year">2026</span> Elevy</span><span>Gama–DF · Luziânia–GO</span><a href="#inicio">Voltar ao topo ↑</a></div>
   </footer>
+
+  <div class="selection-dock" id="selection-dock" hidden>
+    <div><strong><span id="selection-count">0</span> selecionado(s)</strong><span id="selection-preview"></span></div>
+    <button type="button" id="clear-selection">Limpar</button>
+    <button class="button button-primary" type="button" id="review-selection">Revisar pedido <span aria-hidden="true">→</span></button>
+  </div>
 
   <a class="mobile-whatsapp" data-whatsapp data-intent="atendimento" href="https://wa.me/5561991416144" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Priscila no WhatsApp">Falar com a Priscila <span aria-hidden="true">↗</span></a>
   <noscript><div class="noscript">Ative o JavaScript para preparar sua mensagem ou fale pelo WhatsApp: <a href="https://wa.me/5561991416144">(61) 99141-6144</a>.</div></noscript>
