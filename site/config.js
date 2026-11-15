@@ -7,5 +7,5 @@ window.ELEVY = Object.freeze({
   address: 'Quadra 02, Conjunto I, Lote 405 — Setor Norte, Gama, Brasília–DF, 72430-209',
   reference: 'Próximo à Av. Corpo de Bombeiros, na rua da Auto Escola Mega',
   maps: 'https://maps.app.goo.gl/CiePNUp7ugi96bZj9',
-  canonical: 'https://elevysaude.pages.dev/'
+  canonical: 'https://elevysaude.com.br/'
 });

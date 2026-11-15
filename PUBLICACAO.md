@@ -9,7 +9,7 @@
 - Diretório de saída: `site`.
 - Diretório raiz: padrão (raiz do repositório).
 
-Cada push na `main` publica uma nova versão em **https://elevysaude.pages.dev/**. Projeto Cloudflare Pages: `elevysaude`, conectado ao repositório GitHub acima.
+Cada push na `main` publica uma nova versão no projeto Cloudflare Pages `elevysaude`. A URL oficial é **https://elevysaude.com.br/** e a URL técnica permanece disponível em `https://elevysaude.pages.dev/`.
 
 ### Estado em 14/11/2026
 
@@ -21,14 +21,14 @@ Cada push na `main` publica uma nova versão em **https://elevysaude.pages.dev/*
 
 ## Domínio próprio
 
-O domínio ainda não foi informado. Quando estiver definido:
-
-1. Adicione primeiro o domínio canônico em **Cloudflare Pages → Custom domains** e use exatamente o destino fornecido pelo painel.
-2. Configure também a versão alternativa (`www` ou raiz) e crie um redirecionamento permanente 301 para a versão canônica.
-3. No Registro.br, só altere os registros indicados pela configuração real do Cloudflare. Exporte e preserve antes todos os registros existentes, especialmente MX, SPF, DKIM e demais TXT de e-mail.
-4. Aguarde a emissão do certificado e valide HTTPS nos dois endereços, a tag canônica, `robots.txt` e `sitemap.xml`.
-
-Não presuma valores de CNAME, A/AAAA ou nameservers: eles dependem do domínio que será registrado e da zona criada no login do cliente. Preencha aqui as instruções exatas somente depois da configuração real do domínio.
+- Domínio canônico: `https://elevysaude.com.br/`.
+- Versão alternativa: `https://www.elevysaude.com.br/` (deve redirecionar permanentemente para a versão sem `www`).
+- Registrador: Registro.br.
+- Servidores DNS: `dana.ns.cloudflare.com` e `dean.ns.cloudflare.com`.
+- CNAME raiz (`@`): `elevysaude.pages.dev`, com proxy Cloudflare.
+- CNAME `www`: `elevysaude.pages.dev`, com proxy Cloudflare.
+- Registros MX e TXT preexistentes foram preservados.
+- Domínio raiz e HTTPS validados em 15/11/2026; validação final de `www` e regra 301 ainda devem ser confirmadas.
 
 ## Checklist de lançamento
 
